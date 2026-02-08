@@ -1,0 +1,182 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>书潮 · 全栈书籍阅读平台</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">书潮</div>
+      <div class="subtitle">全栈阅读平台</div>
+    </div>
+    <div class="top-search">
+      <input id="globalSearchInput" type="search" placeholder="全站搜索书名 / 作者 / 标签" />
+      <button id="globalSearchBtn" class="chip">搜索</button>
+    </div>
+    <div class="top-actions">
+      <button id="scrollCreate" class="btn primary">录入书籍</button>
+      <div id="apiStatus" class="status-pill">API</div>
+    </div>
+  </header>
+
+  <div class="app">
+    <aside class="sidebar">
+      <div class="panel brand-panel">
+        <div class="panel-title">馆藏概览</div>
+        <div id="sidebarStats" class="sidebar-stats"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">搜索与筛选</div>
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="搜索书名 / 作者 / 标签" />
+          <button id="clearSearch" class="chip">清空</button>
+        </div>
+        <div class="filter-block">
+          <div class="block-title">标签偏好</div>
+          <div id="tagList" class="tag-list"></div>
+        </div>
+        <div class="filter-block">
+          <div class="block-title">排序方式</div>
+          <div class="sort-buttons">
+            <button data-sort="smart" class="chip active">智能</button>
+            <button data-sort="heat" class="chip">热度</button>
+            <button data-sort="rating" class="chip">评分</button>
+            <button data-sort="newest" class="chip">最新</button>
+          </div>
+        </div>
+        <div class="sidebar-actions">
+          <button id="resetFilters" class="btn ghost">重置筛选</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">外部书源</div>
+        <div class="book-meta">可检索已授权的公共书源接口。</div>
+        <div class="meta-list" id="sourceMeta"></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="hero" id="hero">
+        <div class="hero-text">
+          <div class="hero-kicker">今日精选</div>
+          <h1 id="heroTitle">加载中</h1>
+          <p id="heroDesc">正在为你准备精选推荐…</p>
+          <div class="hero-actions">
+            <button id="heroRead" class="btn primary">开始阅读</button>
+            <button id="heroFavorite" class="btn ghost">加入收藏</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-cover" id="heroCover"></div>
+          <div class="hero-meta" id="heroMeta"></div>
+        </div>
+      </section>
+
+      <section class="section-wrap">
+        <div class="section-header">
+          <h2>智能推荐</h2>
+          <div class="section-desc" id="recommendDesc"></div>
+        </div>
+        <div class="card-grid" id="recommendGrid"></div>
+      </section>
+
+      <section class="section-wrap">
+        <div class="section-header">
+          <h2>书籍分区</h2>
+          <div class="section-desc">按主题与场景快速进入分区。</div>
+        </div>
+        <div class="category-grid" id="categoryGrid"></div>
+      </section>
+
+      <section class="section-wrap">
+        <div class="section-header">
+          <h2>馆藏书库</h2>
+          <div class="section-desc" id="resultHint"></div>
+        </div>
+        <div class="card-grid" id="bookGrid"></div>
+      </section>
+
+      <section class="section-wrap" id="externalSection">
+        <div class="section-header">
+          <h2>外部书源搜索</h2>
+          <div class="section-desc">搜索公开书源并一键导入到你的书库。</div>
+        </div>
+        <div class="external-search">
+          <select id="externalSource"></select>
+          <input id="externalQuery" type="search" placeholder="输入关键词，例如：海明威 / 人类简史" />
+          <button id="externalSearchBtn" class="btn primary">开始搜索</button>
+        </div>
+        <div id="externalResults" class="external-grid"></div>
+      </section>
+
+      <section class="section-wrap" id="createSection">
+        <div class="section-header">
+          <h2>录入书籍</h2>
+          <div class="section-desc">可录入小说、名著或自有内容，支持长文本阅读。</div>
+        </div>
+        <form id="createForm" class="form-card">
+          <div class="form-grid">
+            <label>
+              <span>书名</span>
+              <input id="createTitle" required placeholder="例如：平凡的世界" />
+            </label>
+            <label>
+              <span>作者</span>
+              <input id="createAuthor" required placeholder="例如：路遥" />
+            </label>
+            <label>
+              <span>分区</span>
+              <select id="createCategory"></select>
+            </label>
+            <label>
+              <span>标签</span>
+              <input id="createTags" placeholder="用逗号分隔，例如：现实,成长" />
+            </label>
+            <label class="full">
+              <span>简介</span>
+              <textarea id="createDescription" rows="3" placeholder="一句话简介"></textarea>
+            </label>
+            <label class="full">
+              <span>正文内容</span>
+              <textarea id="createContent" rows="10" placeholder="直接粘贴完整文本或章节内容"></textarea>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">保存书籍</button>
+            <button type="reset" class="btn ghost">清空表单</button>
+          </div>
+          <div class="form-hint" id="createHint"></div>
+        </form>
+      </section>
+    </main>
+
+    <aside class="rightbar">
+      <div class="panel">
+        <div class="panel-title">热度榜单</div>
+        <div id="hotList" class="rank-list"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">最近阅读</div>
+        <div id="historyList" class="history-list"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">阅读笔记</div>
+        <div class="note-input">
+          <input id="noteInput" placeholder="记录一句想法" />
+          <button id="addNote" class="chip">添加</button>
+        </div>
+        <div id="noteList" class="note-list"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

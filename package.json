@@ -1,0 +1,13 @@
+﻿{
+  "name": "shuchao-fullstack",
+  "version": "2.0.0",
+  "private": true,
+  "description": "书潮 · 全栈书籍阅读平台",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
