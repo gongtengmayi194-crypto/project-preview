@@ -1,0 +1,37 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1770616129
+export_presets.cfg::TextFile::-1::1770566082::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1770559688::0::1::::<><><>0<>0<><>::
+::res://assets/::1770613994
+::res://assets/audio/::1770615368
+不再曼波 (哈基米纯享)-哈基米.mp3::AudioStreamMP3::4072518158843843017::1770613471::1770616129::1::::<><><>0<>0<>9cda27e3fdf0ba474181f2519125ce24<>res://.godot/imported/不再曼波 (哈基米纯享)-哈基米.mp3-cc45c92713a4324f17e5cda00547daf7.mp3str::
+出哈 (哈基米bgm)-大清第一巴图鲁.mp3::AudioStreamMP3::275998140921190473::1770613465::1770616129::1::::<><><>0<>0<>295591edbcdd191cabbe8a8ef821b078<>res://.godot/imported/出哈 (哈基米bgm)-大清第一巴图鲁.mp3-afd135519623dc1de9f8e2891aadf313.mp3str::
+基米说(哈基米)-哈基米..mp3::AudioStreamMP3::6397465401247180320::1770613456::1770616129::1::::<><><>0<>0<>af4368b09de25946ea0d3769022b7e75<>res://.godot/imported/基米说(哈基米)-哈基米..mp3-e655dfbe02b5a0d0b0d071745a54ee62.mp3str::
+打火机 (哈基米南北绿豆)-VT.Shy.mp3::AudioStreamMP3::1473067662267717834::1770613463::1770616129::1::::<><><>0<>0<>f48b7565431bb4ec1b4e5323f3d1d0a1<>res://.godot/imported/打火机 (哈基米南北绿豆)-VT.Shy.mp3-15eaea488f3c553bd9c4df5bdcafcf9e.mp3str::
+蓝莲哈-哈基米.mp3::AudioStreamMP3::6265793660002627565::1770613475::1770616129::1::::<><><>0<>0<>6c46ff83f6e53ae44b0e7eb531028b0c<>res://.godot/imported/蓝莲哈-哈基米.mp3-af078b890892158166d97e8eb144ef55.mp3str::
+跳楼基（哈基米纯享版）-暴躁小狗.mp3::AudioStreamMP3::9094784009447517433::1770613462::1770616129::1::::<><><>0<>0<>b97ecfda9ead7c6350bbc5b7efc5c122<>res://.godot/imported/跳楼基（哈基米纯享版）-暴躁小狗.mp3-6e4fe6c3050d31f0349850b811ad703f.mp3str::
+::res://assets/shaders/::1770615368
+pixelate.gdshader::Shader::8257694988834813324::1770614514::0::1::::<><><>0<>0<><>::
+::res://assets/sprites/::1770615839
+iroha.png::CompressedTexture2D::8291224431030851682::1770615243::1770616130::1::::<><><>0<>0<>eb5addb3e33e84b51d618fe8939bf087<>res://.godot/imported/iroha.png-eb202488f7c572c1d942935cd8403226.ctex::
+kaguya.png::CompressedTexture2D::5054278359625612587::1770615214::1770616130::1::::<><><>0<>0<>1ef812406265cf0d970fed013f8f4530<>res://.godot/imported/kaguya.png-fb1b30c0ad1dbdd8ef9579b33293a46d.ctex::
+yachiyo.png::CompressedTexture2D::4480593434060682641::1770615186::1770616130::1::::<><><>0<>0<>ca1c8386d83d91469192c81775e2688f<>res://.godot/imported/yachiyo.png-f63ca76f123aaa936ae18046e70b2f44.ctex::
+::res://codex-game/::1770566081
+::res://scenes/::1770614260
+BuffOrb.tscn::PackedScene::-1::1770614289::0::1::::<><><>0<>0<><>::res://scripts/BuffOrb.gd
+BuffWall.tscn::PackedScene::-1::1770562357::0::1::::<><><>0<>0<><>::res://scripts/BuffWall.gd
+Bullet.tscn::PackedScene::-1::1770562357::0::1::::<><><>0<>0<><>::res://scripts/Bullet.gd
+Enemy.tscn::PackedScene::-1::1770563387::0::1::::<><><>0<>0<><>::res://scripts/Enemy.gd
+EnemyBullet.tscn::PackedScene::-1::1770564627::0::1::::<><><>0<>0<><>::res://scripts/EnemyBullet.gd
+Main.tscn::PackedScene::-1::1770615700::0::1::::<><><>0<>0<><>::res://scripts/Game.gd<>res://scenes/Player.tscn
+Player.tscn::PackedScene::-1::1770615537::0::1::::<><><>0<>0<><>::res://scripts/Player.gd<>res://assets/sprites/kaguya.png<>res://assets/shaders/pixelate.gdshader
+ShooterEnemy.tscn::PackedScene::-1::1770564627::0::1::::<><><>0<>0<><>::res://scripts/ShooterEnemy.gd
+::res://scripts/::1770615368
+BuffOrb.gd::GDScript::4223234694308748654::1770615898::0::1::::<>Area2D<><>0<>0<><>::
+BuffWall.gd::GDScript::8772916200627820962::1770614731::0::1::::<>Area2D<><>0<>0<><>::
+Bullet.gd::GDScript::2290340835302813572::1770562796::0::1::::<>Area2D<><>0<>0<><>::
+Enemy.gd::GDScript::5779953138063014383::1770563387::0::1::::<>Area2D<><>0<>0<><>::
+EnemyBullet.gd::GDScript::3024748071428751247::1770564627::0::1::::<>Area2D<><>0<>0<><>::
+Game.gd::GDScript::835219932871660684::1770615754::0::1::::<>Node2D<><>0<>0<><>::
+Player.gd::GDScript::5333812627262344921::1770616039::0::1::::<>CharacterBody2D<><>0<>0<><>::
+ShooterEnemy.gd::GDScript::2281124214980767524::1770564627::0::1::::<>Area2D<><>0<>0<><>::
