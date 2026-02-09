@@ -1,0 +1,11 @@
+res://scripts/BossGuard.gd
+res://scripts/BuffOrb.gd
+res://scripts/BuffWall.gd
+res://scripts/Bullet.gd
+res://scripts/Enemy.gd
+res://scripts/EnemyBullet.gd
+res://scripts/FinalBoss.gd
+res://scripts/Game.gd
+res://scripts/LaserBeam.gd
+res://scripts/Player.gd
+res://scripts/ShooterEnemy.gd
