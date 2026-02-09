@@ -1,0 +1,27 @@
+﻿{
+  "sources": [
+    {
+      "id": "openlibrary",
+      "name": "Open Library",
+      "enabled": true,
+      "type": "api",
+      "baseUrl": "https://openlibrary.org/search.json",
+      "notes": "公共检索接口，仅返回元数据"
+    },
+    {
+      "id": "gutendex",
+      "name": "Project Gutenberg (Gutendex)",
+      "enabled": true,
+      "type": "api",
+      "baseUrl": "https://gutendex.com/books",
+      "notes": "公版图书，可获取全文链接"
+    },
+    {
+      "id": "custom",
+      "name": "自定义书源",
+      "enabled": false,
+      "type": "custom",
+      "notes": "请填入你已授权的书籍站点接口"
+    }
+  ]
+}
