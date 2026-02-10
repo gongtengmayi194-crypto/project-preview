@@ -69,7 +69,7 @@ offset_left = 26.0
 offset_top = 82.0
 offset_right = 26.0
 offset_bottom = 82.0
-text = "加载中"
+text = "加载中..."
 theme_override_font_sizes/font_size = 16
 
 [node name="MessageBg" type="ColorRect" parent="HUD"]

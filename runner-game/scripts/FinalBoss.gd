@@ -1,8 +1,8 @@
 extends Area2D
 
 var game
-var hp = 200
-var max_hp = 200
+var hp = 700
+var max_hp = 700
 var speed = 0.0
 var is_boss = true
 
